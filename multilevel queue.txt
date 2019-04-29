@@ -1,0 +1,44 @@
+#include <stdio.h> 
+int main()  
+{ 
+ int AT[10], BT[10], temp[10]; 
+ int i, smallest, count = 0, time, limit; 
+ double WT = 0, TAT = 0, end; 
+ float average_waiting_time, average_turnaround_time; 
+ printf("\nEnter the Total Number of Processes:\t"); 
+ scanf("%d", &limit);  
+ printf("\nEnter Details of %d Processes\n", limit); 
+ for(i = 0; i < limit; i++) 
+  { 
+  printf("\nEnter Arrival Time:\t"); 
+  scanf("%d", &AT[i]); 
+  printf("Enter Burst Time:\t"); 
+  scanf("%d", &BT[i]);  
+  temp[i] = BT[i]; 
+ } 
+BT[9] = 9999;   
+  for(time = 0; count != limit; time++) 
+  { 
+     smallest = 9; 
+    for(i = 0; i < limit; i++) 
+    { 
+      if(AT[i] <= time && BT[i] < BT[smallest] && BT[i] > 0) 
+   { 
+       smallest = i; 
+   } 
+    } 
+    BT[smallest]--; 
+    if(BT[smallest] == 0) 
+    { 
+      count++; 
+      end = time + 1; 
+      WT = WT + end - AT[smallest] - temp[smallest]; 
+      TAT = TAT + end - AT[smallest]; 
+    } 
+  } 
+average_waiting_time = WT / limit;  
+ average_turnaround_time = TAT / limit; 
+  printf("\n\nAverage Waiting Time:\t%lf\n", average_waiting_time); 
+     printf("Average Turnaround Time:\t%lf\n", average_turnaround_time); 
+     return 0; 
+} 

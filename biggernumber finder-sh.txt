@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo "Enter Number 1 :"
+
+read n1
+
+echo "Enter Number 2 :"
+
+read n2
+
+echo "Enter Number 3 :"
+
+read n3
+
+if [[ $n1 > $n2 && $n1 > $n3 ]]
+
+then
+
+echo "Number $n1 Is Bigger"
+
+elif [[ $n2 > $n1 && $n2 > $n3 ]] 
+
+then
+
+echo "Number $n2 Is Bigger"
+
+else
+
+echo "Number $n3 Is Bigger"
+
+fi

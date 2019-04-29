@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo "Enter Number : "
+
+read num
+
+a=2
+
+b=0
+
+
+while [ $a -lt $num ];
+ 
+do
+   
+solve=$(($num % $a))
+
+  
+if [[ $solve -eq $b ]]; 
+then
+       
+echo " The $number is NOT a PRIME NUMBER."
+       
+echo -e "\n"
+       
+exit
+  
+else
+    
+a=$(($a+1))
+  
+fi
+
+done
+       
+echo " The $number is a PRIME NUMBER."
+       
+echo -e "\n"
+

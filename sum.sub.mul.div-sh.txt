@@ -1,0 +1,71 @@
+#!/bin/bash
+
+echo "Enter Number 1 :"
+
+read n1
+
+echo "Enter Number 2 :"
+
+read n2
+
+echo "Enter Your Choice : "
+
+echo "Enter 1 for sum"
+
+echo "Enter 2 for sub"
+
+echo "Enter 3 for mul"
+
+echo "Enter 4 for div"
+
+read ch
+
+if [ $ch == "1" ]
+
+then
+
+p=$((n1+n2))
+
+echo "Your sum is : "
+
+echo $p
+
+fi
+
+if [ $ch == "2" ]
+
+then
+
+q=$((n1-n2))
+
+echo "Your sub is : "
+
+echo $q
+
+fi
+
+if [ $ch == "3" ]
+
+then
+
+r=$((n1*n2))
+
+echo "Your sum is : "
+
+echo $r
+
+fi
+
+if [ $ch == "4" ]
+
+then
+
+s=$((n1/n2))
+
+echo "Your sum is : "
+
+echo $s
+
+fi
+
+

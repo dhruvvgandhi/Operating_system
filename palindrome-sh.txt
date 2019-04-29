@@ -1,0 +1,16 @@
+#!/bin/bash
+length=$(echo $* | wc -c)
+if [[ $((length%2)) == 0 ]];then
+   length=$((length/2))   
+   l=$(echo $* | cut -c 1-$length)
+   r=$(echo $* | rev | cut -c 1-$length)
+else
+   length=$(((length-1)/2))
+   l=$(echo $* | cut -c 1-$length)
+   r=$(echo $* | rev | cut -c 1-$length)
+fi
+if [[ "$l" == "$r" ]];then
+   echo "Yes.It is a palindrome"
+else
+   echo "Sorry.It is not a palindrome"
+fi

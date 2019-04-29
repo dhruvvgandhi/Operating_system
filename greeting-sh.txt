@@ -1,0 +1,25 @@
+x=`date +%H`
+ 
+if [ $x -le 12 ];
+ 
+then
+ 
+echo "Good Morning"
+ 
+elif [ $x -ge 12 -a $x -le 17 ];
+ 
+then
+ 
+echo "Good Afternoon"
+ 
+elif [ $x -ge 17 -a $x -le 21 ];
+ 
+then
+ 
+echo "Good Evening"
+ 
+else
+ 
+echo "Good Night"
+ 
+fi
